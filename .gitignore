@@ -1,0 +1,5 @@
+.env
+.github/.gitmessage.txt
+.vscode
+.idea
+log
