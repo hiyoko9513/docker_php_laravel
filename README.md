@@ -27,6 +27,7 @@ $ rm -r tmp
 ### 3. laravel起動(コンテナ内)
 ```shell
 # 環境依存有
+$ cd /var/www/app
 $ composer install
 $ cp .env.docker.example .env
 $ php artisan key:generate
