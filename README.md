@@ -23,13 +23,18 @@ $ cp -f ./app/README.md ./tmp/README.md
 $ mv tmp/* tmp/.[!.]* tmp/..?* app/
 $ rm -r tmp
 ```
+.envの設定  
+.env.docker.exampleファイルにdocker固有の設定を記入しているので、.envにマージすること。  
+マージ後下記のコマンドを実行
+```shell
+$ cp .env .env.example
+```
 
 ### 3. laravel起動(コンテナ内)
 ```shell
 # 環境依存有
 $ cd /var/www/app
 $ composer install
-$ cp .env.docker.example .env
 $ php artisan key:generate
 $ php artisan jwt:secret
 $ php artisan storage:link
