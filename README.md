@@ -18,7 +18,6 @@ $ docker compose --env-file ./build/docker/.env exec workspace bash
 ```shell
 $ cd /var/www
 $ composer create-project laravel/laravel tmp
-$ mv tmp/README.md app/
 $ cp -f ./app/README.md ./tmp/README.md
 # 注意：readme等の同一ファイルは上書きされる
 $ mv tmp/* tmp/.[!.]* tmp/..?* app/
