@@ -36,10 +36,9 @@ $ cp .env .env.docker.example
 $ cd /var/www/app
 $ composer install
 $ php artisan key:generate
-$ php artisan jwt:secret
 $ php artisan storage:link
-$ sudo chmod -R 775 bootstrap/cache && sudo chmod -R 775 storage
-$ sudo chown -R www-data:admin storage && sudo chown -R www-data:admin bootstrap/cache
+$ chmod -R 775 bootstrap/cache && chmod -R 775 storage
+$ chown -R www-data:adm storage && chown -R www-data:adm bootstrap/cache
 $ php artisan migrate:fresh --seed
 ```
 
