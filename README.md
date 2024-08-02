@@ -27,7 +27,7 @@ $ rm -r tmp
 .env.docker.exampleファイルにdocker固有の設定を記入しているので、.envにマージすること。  
 マージ後下記のコマンドを実行
 ```shell
-$ cp .env .env.example
+$ cp .env .env.docker.example
 ```
 
 ### 3. laravel起動(コンテナ内)
