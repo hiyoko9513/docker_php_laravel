@@ -11,6 +11,7 @@ RUN apt-get update \
   libjpeg62-turbo-dev \
   libmcrypt-dev \
   libpng-dev \
+  libicu-dev \
   libfontconfig1 \
   libxrender1 \
   && apt-get clean
@@ -18,6 +19,7 @@ RUN apt-get update \
 RUN docker-php-ext-configure gd --with-freetype --with-jpeg
 RUN docker-php-ext-install gd
 RUN docker-php-ext-install bcmath
+RUN docker-php-ext-install intl
 RUN docker-php-ext-install pdo_mysql mysqli
 
 WORKDIR /usr/bin
